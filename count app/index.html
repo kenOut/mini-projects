@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Count App</h3>
+        <div class="counter">
+            <button id="incrementBtn">+</button>
+            <div id="countValue">0</div>
+            <button id="decrementBtn">-</button>
+        </div>
+        <button id="resetBtn">Reset</button>
+    </div>
+    <script>
+        let counter = 0;
+
+const countValue = document.getElementById('countValue');
+const incrementBtn = document.getElementById('incrementBtn');
+const decrementBtn = document.getElementById('decrementBtn');
+const resetBtn = document.querySelector('#resetBtn');
+
+// To increase the value of your count
+incrementBtn.addEventListener('click',() => {
+    counter++;
+    counter.innerHTML = counter;
+});
+
+// To reduce the value count 
+decrementBtn.addEventListener('click', () => {
+    counter--;
+    counter.innerHTML = counter;
+});
+
+// To reset to zero 
+resetBtn.addEventListener('click', () => {
+    counter = 0;
+    counter.innerHTML = counter;
+});
+    </script>
+</body>
+</html>
